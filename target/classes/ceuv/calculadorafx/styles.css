@@ -1,0 +1,52 @@
+.root {
+    -fx-background-color: #2b2b2b;
+}
+
+
+#txtPantalla {
+    -fx-font-size: 24px;
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: white;
+    -fx-alignment: center-right;
+    -fx-padding: 10px;
+}
+
+
+.button {
+    -fx-font-size: 18px;
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-border-color: #555;
+}
+
+
+#btnSuma, #btnResta, #btnMultiplica, #btnDivide {
+    -fx-background-color: #ff9800;
+    -fx-border-color: #e68900;
+}
+
+
+#btnIgual {
+    -fx-background-color: #4caf50;
+    -fx-border-color: #388e3c;
+}
+
+
+#btnBorrar {
+    -fx-background-color: #d32f2f;
+    -fx-border-color: #b71c1c;
+}
+
+
+.button:hover {
+    -fx-background-color: #666;
+}
+
+
+.button:pressed {
+    -fx-background-color: #222;
+}
+
