@@ -49,7 +49,7 @@
             <Button fx:id="btn3" mnemonicParsing="false" onAction="#handleNumber" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <Button fx:id="btnIgual" mnemonicParsing="false" onAction="#handleEquals" text="=" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button fx:id="btnSuma" mnemonicParsing="false" onAction="#handleOperation" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="btnBackspace" alignment="CENTER" mnemonicParsing="false" text="Back" textAlignment="JUSTIFY" GridPane.columnIndex="4" />
+            <Button fx:id="btnBackspace" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Back" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
    </children>
