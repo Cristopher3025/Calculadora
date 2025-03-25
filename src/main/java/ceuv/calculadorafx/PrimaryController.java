@@ -14,6 +14,7 @@ public class PrimaryController {
     private double num1 = 0;
     private String operacion = "";
     private boolean operacionSeleccionada = false;
+
     @FXML
     private Button btn7;
     @FXML
@@ -46,29 +47,33 @@ public class PrimaryController {
     private Button btnIgual;
     @FXML
     private Button btnSuma;
+    @FXML
+    private Button btnBackspace;
+    @FXML
+    private Button btnSen;
+    @FXML
+    private Button btnTan;
+    @FXML
+    private Button btnCos;
 
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
     }
 
-    
     @FXML
     private void handleNumber(ActionEvent event) {
         Button btn = (Button) event.getSource();
 
-        
         if (operacionSeleccionada) {
             txtPantalla.clear();
             operacionSeleccionada = false;
         }
 
-        
         if (txtPantalla.getText().length() < 10) {
             txtPantalla.setText(txtPantalla.getText() + btn.getText());
         }
     }
 
-    
     @FXML
     private void handleOperation(ActionEvent event) {
         if (txtPantalla.getText().isEmpty()) {
@@ -85,7 +90,6 @@ public class PrimaryController {
         }
     }
 
-    
     @FXML
     private void handleEquals(ActionEvent event) {
         if (txtPantalla.getText().isEmpty() || operacion.isEmpty()) {
@@ -109,7 +113,6 @@ public class PrimaryController {
                     break;
             }
 
-            
             if (resultado == (int) resultado) {
                 txtPantalla.setText(String.valueOf((int) resultado));
             } else {
@@ -122,7 +125,6 @@ public class PrimaryController {
         }
     }
 
-   
     @FXML
     private void handleClear(ActionEvent event) {
         txtPantalla.clear();
@@ -130,31 +132,31 @@ public class PrimaryController {
         operacion = "";
         operacionSeleccionada = false;
     }
-}
 
-
-@FXML
-private void handleBackspace(ActionEvent event) {
-    String text = txtPantalla.getText();
-    if (!text.isEmpty()) {
-        txtPantalla.setText(text.substring(0, text.length() - 1));
-    }
-}
-
-
-@FXML
-private void handleTrig(ActionEvent event) {
-    Button btn = (Button) event.getSource();
-    String funcion = btn.getText(); // "cos", "sen" o "tan"
-
-    double valor = Double.parseDouble(txtPantalla.getText());
-    double resultado = 0;
-
-    switch (funcion) {
-        case "cos": resultado = Math.cos(Math.toRadians(valor)); break;
-        case "sen": resultado = Math.sin(Math.toRadians(valor)); break;
-        case "tan": resultado = Math.tan(Math.toRadians(valor)); break;
+    // Método para borrar un solo dígito
+    @FXML
+    private void handleBackspace(ActionEvent event) {
+        String text = txtPantalla.getText();
+        if (!text.isEmpty()) {
+            txtPantalla.setText(text.substring(0, text.length() - 1));
+        }
     }
 
-    txtPantalla.setText(String.valueOf(resultado));
+    
+    @FXML
+    private void handleTrig(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        String funcion = btn.getText(); // "cos", "sen" o "tan"
+
+        double valor = Double.parseDouble(txtPantalla.getText());
+        double resultado = 0;
+
+        switch (funcion) {
+            case "cos": resultado = Math.cos(Math.toRadians(valor)); break;
+            case "sen": resultado = Math.sin(Math.toRadians(valor)); break;
+            case "tan": resultado = Math.tan(Math.toRadians(valor)); break;
+        }
+
+        txtPantalla.setText(String.valueOf(resultado));
+    }
 }
