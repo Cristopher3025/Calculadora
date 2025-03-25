@@ -50,6 +50,9 @@
             <Button fx:id="btnIgual" mnemonicParsing="false" onAction="#handleEquals" text="=" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button fx:id="btnSuma" mnemonicParsing="false" onAction="#handleOperation" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button fx:id="btnBackspace" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Back" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Button fx:id="btnSen" mnemonicParsing="false" text="sen" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="btnTan" mnemonicParsing="false" onAction="#handleOperation" text="tan" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="btnCos" mnemonicParsing="false" onAction="#handleOperation" text="cos" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>

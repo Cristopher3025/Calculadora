@@ -132,3 +132,29 @@ public class PrimaryController {
     }
 }
 
+
+@FXML
+private void handleBackspace(ActionEvent event) {
+    String text = txtPantalla.getText();
+    if (!text.isEmpty()) {
+        txtPantalla.setText(text.substring(0, text.length() - 1));
+    }
+}
+
+
+@FXML
+private void handleTrig(ActionEvent event) {
+    Button btn = (Button) event.getSource();
+    String funcion = btn.getText(); // "cos", "sen" o "tan"
+
+    double valor = Double.parseDouble(txtPantalla.getText());
+    double resultado = 0;
+
+    switch (funcion) {
+        case "cos": resultado = Math.cos(Math.toRadians(valor)); break;
+        case "sen": resultado = Math.sin(Math.toRadians(valor)); break;
+        case "tan": resultado = Math.tan(Math.toRadians(valor)); break;
+    }
+
+    txtPantalla.setText(String.valueOf(resultado));
+}

@@ -24,6 +24,7 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -48,6 +49,10 @@
             <Button fx:id="btn3" mnemonicParsing="false" onAction="#handleNumber" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <Button fx:id="btnIgual" mnemonicParsing="false" onAction="#handleEquals" text="=" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button fx:id="btnSuma" mnemonicParsing="false" onAction="#handleOperation" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="btnBackspace" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Back" textAlignment="JUSTIFY" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+            <Button fx:id="btnSen" mnemonicParsing="false" text="sen" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="btnTan" mnemonicParsing="false" onAction="#handleOperation" text="tan" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="btnCos" mnemonicParsing="false" onAction="#handleOperation" text="cos" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
       </GridPane>
    </children>
